@@ -1,7 +1,882 @@
-{% extends 'main/base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}Hello !{% endblock %}
+<head>
 
-{% block body %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="boutique en ligne">
+    <meta name="author" content="Malick TOUNKARA">
+    <link rel="shortcut icon" href="{{ asset('tkr/img/logos/favicon.png') }}" type="image/png">
+    <meta name="google-site-verification" content="Cm2uB5WMPSyJyvnEAemfewMNP-l4vQGyxLsljWtjsrM" />
+    <title>Malick Tounkara | L'informatisation est notre priorité</title>
 
-{% endblock %}
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('tkr/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ asset('tkr/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/agency.min.css" rel="stylesheet"> -->
+    <link href="{{ asset('tkr/css/agency.css') }}" rel="stylesheet">
+
+</head>
+<style type="text/css">
+    .loader-wrapper {
+        width: 100px;
+        margin: 0 auto;
+        background: red;
+        position: fixed;
+        top: 50%;
+
+    }
+
+    #mainNav {
+        background-color: none;
+    }
+</style>
+
+<body id="page-top">
+    <!-- <div class="loader-wrapper">
+        <h3>Chargemrnt</h3>
+    </div> -->
+    <!-- <div id=chargement> -->
+    <!-- Chargement en cours... -->
+    <!-- <img src="img/gaboma.gif">
+      <p>Chargement ...</p>
+  </div> -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark- fixed-top navbar-shrink" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger font-weight-bold" href="#page-top">MALICK TOUNKARA<span></span></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Créations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tutoriels">Tutoriels
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Bienvenue sur notre site et nous vous remercions de votre visite</div>
+                <!-- <div class="intro-heading text-uppercase">C ici</div> -->
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus
+                    d'informations</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">L'informatisation est notre priorité.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4" data-aos="fade-right">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">E-Commerce</h4>
+                    <p class="text-muted">Créer votre boutique en ligne et gagner un plus grand marché</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Responsive Design</h4>
+                    <p class="text-muted">Une expérience de lecture et de navigation optimale pour l'utilisateur quelle
+                        que soit sa gamme d'appareil.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Application personnalisée</h4>
+                    <p class="text-muted">Notre équipe est là pour vous accompagner et vous aider dans
+                        vos projets aussi fous soient-ils.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light page-section" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Créations</h2>
+                    <h3 class="section-subheading text-muted">Des exemples de projet créent dans nos ateliers.</h3>
+                </div>
+            </div>
+            <div class="row">
+                {% for key, item in projets %}                    
+                <div class="col-md-4 col-sm-6 mx-auto portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1-{{ key }}">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div data-aos="flip-left" data-aos-duration="3000" data-aos-anchor-placement="center-bottom"
+                            style="height:200px;background:{{ item.color }}" class="text-center">
+                            <img class="img-fluid d-block mx-auto h-100" src="{{ asset('tkr/img/' ~ item.img) }}"
+                                alt="">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>
+                            {{ item.nom }}
+                        </h4>
+                        <p class="text-muted">
+                        {{ item.title}}
+                        </p>
+                        {% if item.link is empty %}
+    
+                        <!-- <a href="#" target="_blank" class="btn btn-primary"> Visiter <i
+                                class="fa fa-eye" aria-hidden="true"></i> </a> -->
+                        {% endif %}
+                    </div>
+                </div>
+                 {% endfor %}
+
+
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div>
+            <img class="img-fluid d-block mx-auto h-100" style="width:400px;height:300px" src="img/portfolio/02-thumbnail.jpg" alt="">            
+            </div>
+          </a>
+          <div class="portfolio-caption">
+            <h4>Explore</h4>
+            <p class="text-muted">Graphic Design</p>
+          </div>
+        </div> -->
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Finish</h4>
+            <p class="text-muted">Identity</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Lines</h4>
+            <p class="text-muted">Branding</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Southwest</h4>
+            <p class="text-muted">Website Design</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Window</h4>
+            <p class="text-muted">Photography</p>
+          </div>
+        </div> -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tutorils -->
+    <section class="page-section" id="tutoriels">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Tutoriels</h2>
+                    <h3 class="section-subheading text-muted">Des tutoriels pour débutant</h3>
+                </div>
+                <a href="/tutoriels-html&css">Tutoriels html & css</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="bg-light page-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">A propos</h2>
+                    <h3 class="section-subheading text-muted">malick-tounkara.com est une plate-forme
+                        électronique conçue pour vous
+                        afin de répondre à vos préocupations
+
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="{{ asset('tkr/img/about/1.jpg') }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                                    class="timeline-heading">
+                                    <h4>2020</h4>
+                                    <h4 class="subheading">Nos débuts</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Création et lancement du site. </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="{{ asset('tkr/img/about/2.jpg') }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Février 2021</h4>
+                                    <h4 class="subheading">Ajout de deux membres</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Pépin Djoneska et Mamadou diéme font désormais partie de notre
+                                        équipe.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2012</h4>
+                                    <h4 class="subheading">Transition to Full Service</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2014</h4>
+                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                                    </p>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="timeline-inverted">
+                            <div data-aos="zoom-out-up" class="timeline-image">
+                                <h4>Faire partie
+                                    <br>de notre
+                                    <br>histoire!
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="page-section" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Notre incroyable équipe</h2>
+                    <h3 class="section-subheading text-muted">Notre équipe est là pour vous accompagner et vous aider
+                        dans
+                        vos projets aussi fous soient-ils</h3>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+            <h4>Kay Garland</h4>
+            <p class="text-muted">Lead Designer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+                <div class="col-sm-4 mx-auto">
+                    <div data-aos="fade-up" class="team-member">
+                        <img class="mx-auto rounded-circle" src="{{ asset('tkr/img/team/pepin.jpg') }}" alt="">
+                        <h4> <span>P</span>épin Djoneska</h4>
+                        <p class="text-muted">Développeur Full-stack</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=221772375369&text=Salut , Pépin j'ai eu votre contacte sur votre site">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 mx-auto">
+                    <div data-aos="fade-down" class="team-member">
+                        <img class="mx-auto rounded-circle" src="{{ asset('tkr/img/team/malick-tounkara.jpg') }}" alt="">
+                        <h4>Malick tounkara</h4>
+                        <p class="text-muted">Développeur Web</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=221781278288&text=Salut, Malick j'ai eu votre contacte sur votre site :">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/malick.tounkara.50/">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <!-- <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li> -->
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="{{ asset('tkr/img/team/dieme3.jpg') }}"
+                            alt="mamadou dieme">
+                        <h4>Mamadou Dieme</h4>
+                        <p class="text-muted">Développeur Java</p>
+                        <ul class="list-inline social-buttons">
+
+                            <!-- <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li> -->
+                            <!-- <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li> -->
+                            <!-- <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li> -->
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=221770431225&text=Bienvenue chez TKR-CODE. (Merci de vous présenter)">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">
+                        <!-- Etudiant  à la fois travailleur indépendant. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <!-- <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- Contact -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div data-aos="fade-up-right" class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Contactez nous</h2>
+                    <h3 class="section-subheading text-muted">Comment pouvons-nous vous aider ?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text"
+                                        placeholder="Votre Nom (Obligatoire)" required="required"
+                                        data-validation-required-message="Entrer votre nom s'il vous plait.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email"
+                                        placeholder="Votre Email (Obligatoire)" required="required"
+                                        data-validation-required-message="Entrer votre adresse email s'il vous plait.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" type="tel"
+                                        placeholder="Votre numéro (Obligatoire)" required="required"
+                                        data-validation-required-message="Entrer votre numéro de téléphone s'il vous plait.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message"
+                                        placeholder="Votre Message (Obligatoire)" required="required"
+                                        data-validation-required-message="Entrer un message s'il vous plait."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase"
+                                    type="submit">Envoyer un Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% for key, item in projets %}
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1-{{ key }}" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">
+                                    {{ item.nom }}
+                                </h2>
+                                <p class="item-intro text-muted">
+                                    {{ item.title }}
+                                </p>
+                                <div style="height:200px;background:<?=$projet['color']; ?>" class="text-center">
+                                    <img class="img-fluid d-block mx-auto h-100"
+                                        src="{{ asset('tkr/img/' ~ item.img) }}" alt="">
+                                </div>
+                                <p>
+                                    {{ item.desc }}
+                                </p>
+                                <ul class="list-inline">
+                                    <li>Date:
+                                        {{ item.date }}
+                                    </li>
+                                    <li>Client:
+                                        {{ item.client }}
+                                    </li>
+                                    <li>Categorie:
+                                        {{ item.categorie }}
+                                    </li>
+                                </ul>
+                                <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Fermer</button>
+                                    {% if item.link is empty %}
+                                        <a target="_blank" href="{{ item.link }}" class="btn btn-primary">
+                                            Visiter
+                                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        </a>
+                                    {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  {% endfor %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; malick-tounkara 2020-2021</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a
+                                href="https://api.whatsapp.com/send?phone=221781278288&text=Bienvenue chez TKR-CODE. (Merci de vous présenter)">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li> -->
+                        <!-- <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li> -->
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Politique de confidentialité</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Conditions d'utilisation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="{{ asset('tkr/img/portfolio/02-full.jpg') }}" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                    nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Explore</li>
+                                    <li>Category: Graphic Design</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="{{ asset('tkr/img/portfolio/03-full.jpg') }}" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                    nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Finish</li>
+                                    <li>Category: Identity</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                    nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Lines</li>
+                                    <li>Category: Branding</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                    nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Southwest</li>
+                                    <li>Category: Website Design</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                    nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Window</li>
+                                    <li>Category: Photography</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ asset('tkr/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('tkr/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ asset('tkr/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="{{ asset('tkr/js/jqBootstrapValidation.js') }}"></script>
+    <script src="{{ asset('tkr/contact_me.js') }}"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ asset('tkr/js/agency.min.js') }}"></script>
+
+    <script src="{{ asset('tkr/js/chargement.js') }}"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
