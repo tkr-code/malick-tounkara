@@ -3,6 +3,8 @@ twig:
     form_themes: ['bootstrap_4_layout.html.twig'] # accepte plusieurs thèmes
     globals:
         app_name: 'Malick Tounkara'
+        locales: '%app.locales%'
+
 when@test:
     twig:
         strict_variables: true

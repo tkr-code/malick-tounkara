@@ -6,6 +6,10 @@
     <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
 {% endmacro %}
 
+{% macro saveOrUpdate(button_label) %}
+        <button class="btn btn-primary btn-lg">{{ button_label|default('Save') }} <i class="fas fa-save    "></i> </button>
+{% endmacro %}
+
 {% macro order(state) %}
     {% set type = '' %}
     {% set title = '???' %}

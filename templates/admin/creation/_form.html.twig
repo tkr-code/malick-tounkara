@@ -1,0 +1,56 @@
+{% import "macros/button.html.twig" as btn %}
+
+{{ form_start(form) }}
+<div class="form-row">
+    <div class="form-group col-4">
+        {{ form_row(form.client)}}
+    </div>
+    <div class="form-group col-4">
+        {{ form_row(form.title)}}
+    </div>
+    <div class="form-group col-4">
+        {{ form_row(form.theme)}}
+    </div>
+    <div class="form-group col-4">
+        {{ form_row(form.description)}}
+    </div>
+    <div class="form-group col-4">
+        {{ form_row(form.category)}}
+    </div>
+    <div class="form-group col-4">
+        {{ form_row(form.endDate)}}
+    </div>  
+    <div class="form-group col-4">
+        {{ form_row(form.image)}}
+    </div>  
+    <div class="form-group col-4">
+        {{ form_row(form.link)}}
+    </div>  
+    <div class="form-group col-4">
+        {{ form_row(form.color)}}
+    </div>  
+    <div class="form-group col-4">
+        {{ form_row(form.is_enabled)}}
+    </div>  
+    
+    {% if app.request.attributes.get('_route') == 'creation_edit' %}
+    <div class="row">
+    {% if creation.image %}
+            <div class="col-md-4 col-12">
+                <div class="card">
+                    <img src="{{ asset('/img/creation/' ~ creation.image)}}" class="card-img-top" alt="image" width="100" >
+                        {# <a class="btn" 
+                        href="#"
+                            data-delete  data-token="{{ csrf_token('delete' ~ creation.id) }}"
+                        > <i class="fas fa-trash-alt  text-danger "></i> </a> #}
+                </div>
+            </div>
+    {% else %}
+        <p>Aucune image</p>
+    {% endif %}
+        </div>
+    
+    {% endif %}
+</div>
+    {{ btn.saveOrUpdate() }}
+{{ form_end(form) }}

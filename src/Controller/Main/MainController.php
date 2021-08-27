@@ -2,17 +2,34 @@
 
 namespace App\Controller\Main;
 
+use App\Repository\CreationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+      /**
+     * @Route("/change-lang/{locale}", name="lang")
+     */
+    public function changeLocale($locale, Request $request)
+    {
+    
+        $locale = $request->attributes->get('locale');
+        
+        $request->getSession()->set('_locale', $locale);
+        
+        $request->setLocale($request->getSession()->get('_locale', $locale));    
+        
+        return $this->redirect($request->headers->get('referer'));
+    }
     /**
      * @Route("/", name="home")
      */
-    public function index(): Response
+    public function index(CreationRepository $creationRepository): Response
     {
+
               $projets =
       [
         [
@@ -61,7 +78,7 @@ class MainController extends AbstractController
         ],
       ];
         return $this->render('main/home/index.html.twig', [
-            'projets'=>$projets
+            'projets'=>$creationRepository->findAll()
         ]);
     }
 }

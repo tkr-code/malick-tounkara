@@ -4,11 +4,12 @@
 
 {% extends "admin/base.html.twig" %}
 
-{% block title %}Profile utilisateur{% endblock %}
 
 {% block breadcrumb %}
     {{ utils.breadcrumb('Profile',[])}}
 {% endblock %}
+
+{% block title %}Profile utilisateur{% endblock %}
 
 {% block body %}
 {% for item in app.flashes('success') %}
@@ -36,16 +37,13 @@
 
           <ul class="list-group list-group-unbordered mb-3">
             <li class="list-group-item">
-              <b>Commentaires</b> <a class="float-right">
+              <b>Projet</b> <a class="float-right">
               {# {{ app.user.comments | length }} #}
               </a>
             </li>
-            <li class="list-group-item">
-              <b>Produit enreistré</b> <a class="float-right">0</a>
-            </li>
           </ul>
 
-          <a href="{{ path('profile_edit', {id: app.user.id }) }}" class="btn btn-success btn-block"><b>Modifier <i class="fas fa-pencil-alt"></i> </b></a>
+          {# <a href="{{ path('profile_edit', {id: app.user.id }) }}" class="btn btn-success btn-block"><b>Modifier <i class="fas fa-pencil-alt"></i> </b></a> #}
         </div>
         <!-- /.card-body -->
       </div>

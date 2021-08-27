@@ -59,44 +59,60 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
-                Menu
+                {{'Menu'|trans}}
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        <a class="nav-link js-scroll-trigger" href="#services">{{'Services'|trans}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Créations
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">{{'Créations'|trans}}
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {# <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#tutoriels">Tutoriels
                         </a>
+                    </li> #}
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">{{'A propos'|trans}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">A propos</a>
+                        <a class="nav-link js-scroll-trigger" href="#team">{{'Equipe'|trans}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">Equipe</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">{{'Contact'|trans}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <div class="dropdown open">
+                            <button class="btn nav-link dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                        <img width="30px" src="{{ asset('img/pays/' ~ app.request.locale ~ '') }}.jpg" alt="lang">
+                                    </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                            {% for item in locales %}
+                            {% if item != app.request.locale  %}
+                                <a href="{{ path('lang',{ locale: item }) }}" class="dropdown-item">
+                                    <img width="30px" src="{{ asset('img/pays/' ~ item ~ '') }}.jpg" alt="" srcset="">
+                                {{item}} </a>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Header -->
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Bienvenue sur notre site et nous vous remercions de votre visite</div>
+                <div class="intro-lead-in">{{'Bienvenue sur notre site et nous vous remercions de votre visite'|trans }}</div>
                 <!-- <div class="intro-heading text-uppercase">C ici</div> -->
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus
-                    d'informations</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">
+                {{'Cliquez ici'|trans }}</a>
             </div>
         </div>
     </header>
@@ -106,8 +122,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">L'informatisation est notre priorité.</h3>
+                    <h2 class="section-heading text-uppercase">{{'Services'|trans}}</h2>
+                    <h3 class="section-subheading text-muted">{{"L'informatisation est notre priorité"|trans }}.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -117,25 +133,25 @@
                         <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Créer votre boutique en ligne et gagner un plus grand marché</p>
+                    <p class="text-muted">{{'Créer votre boutique en ligne et gagner un plus grand marché'|trans }}</p>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Une expérience de lecture et de navigation optimale pour l'utilisateur quelle
-                        que soit sa gamme d'appareil.</p>
+                    <h4 class="service-heading">{{'Responsive Design'|trans }}</h4>
+                    <p class="text-muted">
+                    {{"Une expérience de lecture et de navigation optimale pour l'utilisateur quelle que soit sa gamme d'appareil"|trans }}.
+                    </p>
                 </div>
                 <div class="col-md-4" data-aos="fade-left">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-user fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Application personnalisée</h4>
-                    <p class="text-muted">Notre équipe est là pour vous accompagner et vous aider dans
-                        vos projets aussi fous soient-ils.</p>
+                    <h4 class="service-heading">{{'Application personnalisée'|trans }}</h4>
+                    <p class="text-muted">{{'Notre équipe est là pour vous accompagner et vous aider dans vos projets aussi fous soient-ils'|trans }}.</p>
                 </div>
             </div>
         </div>
@@ -146,8 +162,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Créations</h2>
-                    <h3 class="section-subheading text-muted">Des exemples de projet créent dans nos ateliers.</h3>
+                    <h2 class="section-heading text-uppercase">{{'Créations'|trans }}</h2>
+                    <h3 class="section-subheading text-muted">{{'Des exemples de projet créent dans nos ateliers'|trans }}.</h3>
                 </div>
             </div>
             <div class="row">
@@ -161,116 +177,43 @@
                         </div>
                         <div data-aos="flip-left" data-aos-duration="3000" data-aos-anchor-placement="center-bottom"
                             style="height:200px;background:{{ item.color }}" class="text-center">
-                            <img class="img-fluid d-block mx-auto h-100" src="{{ asset('tkr/img/' ~ item.img) }}"
+                            <img class="img-fluid d-block mx-auto h-100" src="{{ asset('/img/creation/' ~ item.image) }}"
                                 alt="">
                         </div>
                     </a>
                     <div class="portfolio-caption">
                         <h4>
-                            {{ item.nom }}
+                            {{ item.title }}
                         </h4>
                         <p class="text-muted">
-                        {{ item.title}}
+                        {{ item.theme}}
                         </p>
                         {% if item.link is empty %}
-    
                         <!-- <a href="#" target="_blank" class="btn btn-primary"> Visiter <i
                                 class="fa fa-eye" aria-hidden="true"></i> </a> -->
                         {% endif %}
                     </div>
                 </div>
                  {% endfor %}
-
-
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <div>
-            <img class="img-fluid d-block mx-auto h-100" style="width:400px;height:300px" src="img/portfolio/02-thumbnail.jpg" alt="">            
-            </div>
-          </a>
-          <div class="portfolio-caption">
-            <h4>Explore</h4>
-            <p class="text-muted">Graphic Design</p>
-          </div>
-        </div> -->
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
-          </div>
-        </div> -->
             </div>
 
         </div>
     </section>
 
     <!-- Tutorils -->
-    <section class="page-section" id="tutoriels">
+    {# <section class="page-section" id="tutoriels">
         <div class="conatiner">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Tutoriels</h2>
                     <h3 class="section-subheading text-muted">Des tutoriels pour débutant</h3>
                 </div>
-                <a href="/tutoriels-html&css">Tutoriels html & css</a>
+                <div class="col-lg-12">
+                    <a href="/tutoriels-html&css">Tutoriels html & css</a>
+                </div>
             </div>
         </div>
-    </section>
+    </section> #}
 
     <!-- About -->
     <section class="bg-light page-section" id="about">
@@ -585,38 +528,38 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2 class="text-uppercase">
-                                    {{ item.nom }}
+                                    {{ item.title }}
                                 </h2>
                                 <p class="item-intro text-muted">
                                     {{ item.title }}
                                 </p>
-                                <div style="height:200px;background:<?=$projet['color']; ?>" class="text-center">
+                                <div style="height:200px;background:{{ item.color }}" class="text-center">
                                     <img class="img-fluid d-block mx-auto h-100"
-                                        src="{{ asset('tkr/img/' ~ item.img) }}" alt="">
+                                        src="{{ asset('img/creation/' ~ item.image) }}" alt="">
                                 </div>
                                 <p>
-                                    {{ item.desc }}
+                                    {{ item.description }}
                                 </p>
                                 <ul class="list-inline">
                                     <li>Date:
-                                        {{ item.date }}
+                                        {{ item.endDate |date('m Y') }}
                                     </li>
                                     <li>Client:
                                         {{ item.client }}
                                     </li>
                                     <li>Categorie:
-                                        {{ item.categorie }}
+                                        {{ item.category }}
                                     </li>
                                 </ul>
                                 <button class="btn btn-secondary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times"></i>
                                     Fermer</button>
-                                    {% if item.link is empty %}
+                                    {# {% if item.link is empty %}
                                         <a target="_blank" href="{{ item.link }}" class="btn btn-primary">
                                             Visiter
                                             <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                         </a>
-                                    {% endif %}
+                                    {% endif %} #}
                             </div>
                         </div>
                     </div>
