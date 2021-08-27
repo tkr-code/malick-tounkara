@@ -9,15 +9,15 @@
 {% extends 'admin/base.html.twig' %}
 
 {% block breadcrumb %}
-    {{ utils.breadcrumb('Manage creation',[
+    {{ utils.breadcrumb('Create demo',[
         {
-            path:path('creation_index'),
-            name:'Manage creation'
+            path:path('demo_index'),
+            name:'Manage demo'
         }
     ])}}
 {% endblock %}
-{% block title %}New Creation{% endblock %}
 
+{% block title %}New Demo{% endblock %}
 {% block body %}
 {% for item in app.flashes('success') %}
   {{ alerte.alert(item,'success')}}
@@ -26,13 +26,13 @@
     <div class="col-lg-12">
         <div class="card card-outline card-primary">
             <div class="card-header">
-                <h4>Create new Creation</h4>
+                <h4>Create new Demo</h4>
             </div>
             <div class="card-body">
-                  {{ include('admin/creation/_form.html.twig') }}
+                {{ include('admin/demo/_form.html.twig') }}
             </div>
             <div class="card-footer">
-                    {{ link.back(path('creation_index')) }}
+                    {{ link.back(path('demo_index')) }}
             </div>
         </div>
     </div>

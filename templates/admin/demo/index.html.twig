@@ -1,0 +1,94 @@
+{% import "macros/table.html.twig" as table %}
+{% import "macros/head.html.twig" as head %}
+{% import "macros/foot.html.twig" as foot %}
+{% import "macros/breadcrumb.html.twig" as utils %}
+{% import "macros/alertes.html.twig" as alerte %}
+{% import "macros/button.html.twig" as btn %}
+{% import "macros/link.html.twig" as link %}
+
+{% extends 'admin/base.html.twig' %}
+
+
+{% block stylesheets %}
+  {{ head.dataTable() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ utils.breadcrumb('Manage demo')}}
+{% endblock %}
+
+{% block title %}Demo index{% endblock %}
+
+{% block body %}
+{% for item in app.flashes('success') %}
+  {{ alerte.alert(item,'success')}}
+{% endfor %}
+<div class="row">
+    <div class="col-lg-12 mb-1">
+        {{ link.add(path('demo_new')) }}
+    </div>
+    <div class="col-lg-12">
+        <div class="card card-outline card-primary">
+            <div class="card-body">
+                <h1>Demo index</h1>
+                <table id="datatable_1" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Content</th>
+                            <th>Url</th>
+                            <th>Created at</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for demo in demos %}
+                        <tr>
+                            <td>#{{ demo.id }}</td>
+                            <td>
+                                {{ demo.title }}
+                                {{ link.viewBlank(path('demo_show',{id:demo.id})) }}
+                                </td>
+                            <td>{{ demo.content }}</td>
+                            <td>
+                               <a target="_blank" href="{{ demo.url }}">
+                                   {{ demo.url }}
+                               </a> 
+                            </td>
+                            <td>{{ demo.createdAt ? demo.createdAt|date('d/m/Y') : '' }}</td>
+                            <td>
+                                {{ link.edit(path('demo_edit', {'id': demo.id})) }}
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="6">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>      
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block foot %}
+{{ foot.dataTable()}}
+{% endblock %}
+
+
+{% block javascripts %}
+{{ table.jsDataTable('datatable_1') }} 
+{# {{table.jsDataTable('datatable_2')  }} #}
+  <script>
+   $(document).ready(function(){
+     //nivagation 
+     $('#gestions').addClass(' menu-is-opening menu-open')
+     $('.gestions').addClass('active')
+     $('.gestion-demo').addClass('active')
+   })
+  </script>
+{% endblock %}
