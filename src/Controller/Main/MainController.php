@@ -10,6 +10,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+        
+    /**
+     * cv
+     * @Route("/cv", name="cv")
+     * @return void
+     */
+    public function cv(): Response
+    {
+      return $this->render('cv/index.html.twig');
+    }
       /**
      * @Route("/change-lang/{locale}", name="lang")
      */

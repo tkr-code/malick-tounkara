@@ -6,6 +6,7 @@
 parameters:
     user_images_directory: '%kernel.project_dir%/public/img/user'
     creation_images_directory: '%kernel.project_dir%/public/img/creation'
+    maitenance_file_path: '%kernel.project_dir%/public/.maintenance'
     app.locales: [en, fr]
     locale: en
 services:
@@ -26,3 +27,9 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\EventListener\MaintenanceListener:
+        arguments:
+            - '%maitenance_file_path%'
+            - '@twig'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
