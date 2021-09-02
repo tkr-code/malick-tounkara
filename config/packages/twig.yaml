@@ -4,7 +4,7 @@ twig:
     globals:
         app_name: 'Malick Tounkara'
         locales: '%app.locales%'
-
+        navs: '@App\Twig\NavExtension'
 when@test:
     twig:
         strict_variables: true

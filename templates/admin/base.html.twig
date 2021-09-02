@@ -259,62 +259,15 @@
           </a>
           <ul class="nav nav-treeview">
           {% if is_granted('ROLE_ADMIN') %}
-            <li class="nav-item">
-              <a href="{{ path('users_index') }}" class="nav-link gestion-user">
-                <i class="fas fa-users nav-icon"></i>
-                <p>{{ 'User'|trans }}</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ path('users_index') }}" class="nav-link gestion-user">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ 'Demo'|trans }}</p>
-              </a>
-            </li>
+            {% for item in navs.getNavs.admin %}
+              <li class="nav-item">
+                <a href="{{ item.path }}" class="nav-link gestion-{{item.title}}">
+                  <i class="{{item.icon}} nav-icon"></i>
+                  <p>{{ item.title|trans }}</p>
+                </a>
+              </li>
+              {% endfor %}
           {% endif %}
-            {# <li class="nav-item">
-              <a href="{{ path('article_index') }}" class="nav-link gestion-customer">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ 'Customer'|trans }}</p>
-              </a>
-            </li> #}
-            {# <li class="nav-item">
-              <a href="{{ path('article_index') }}" class="nav-link gestion-article">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ 'Article'|trans }}</p>
-              </a>
-            </li> #}
-            {# <li class="nav-item">
-              <a href="{{ path('category_index') }}" class="nav-link gestion-category">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ 'Category' |trans }}</p>
-              </a>
-            </li> #}
-            {# <li class="nav-item">
-              <a href="{{ path('order_index') }}" class="nav-link gestion-order ">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ 'Order'|trans }}</p>
-              </a>
-            </li> #}
-            {# <li class="nav-item">
-              <a href="{{ path('user_index') }}" class="nav-link gestion-user">
-                <i class="fas fa-users nav-icon"></i>
-                <p>Utulisateurs</p>
-              </a>
-            </li> #}
-            {# <li class="nav-item">
-              <a href="{{ path('comment_index') }}" class="nav-link gestion-comment">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Commentaire</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ path('critere_index') }}" class="nav-link gestion-critere">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Critère</p>
-              </a>
-            </li>
-             #}
           </ul>
         </li>
          {% endif %}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="bQqINz0" resname="Creation">
+        <source>Creation</source>
+        <target>Création</target>
+      </trans-unit>
+      <trans-unit id="WiNESCj" resname="Manage">
+        <source>Manage</source>
+        <target>Gérer</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="iizAZzs" resname="Demo">
+        <source>Demo</source>
+        <target>Demo</target>
+      </trans-unit>
+      <trans-unit id="GF_NsyJ" resname="Hello">
+        <source>Hello</source>
+        <target>Salut</target>
+      </trans-unit>
+      <trans-unit id="tTGBpNh" resname="My account">
+        <source>My account</source>
+        <target>Mon compte</target>
+      </trans-unit>
+      <trans-unit id="Iv67XLO" resname="My orders">
+        <source>My orders</source>
+        <target>Mes commandes</target>
+      </trans-unit>
+      <trans-unit id="SWFhRVF" resname="Log out">
+        <source>Log out</source>
+        <target>Deconnection</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+      <trans-unit id="ma9mBv_" resname="Menu">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="YE3ORF4" resname="Services">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="pKgsXlU" resname="Creations">
+        <source>Creations</source>
+        <target>Créations</target>
+      </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="3g8jnsQ" resname="Equipe">
+        <source>Equipe</source>
+        <target>Equipe</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="iWSgqnK" resname="Welcome to our site and we thank you for your visit">
+        <source>Welcome to our site and we thank you for your visit</source>
+        <target>L'informatisation est notre priorité</target>
+      </trans-unit>
+      <trans-unit id="YtygB6C" resname="Click here">
+        <source>Click here</source>
+        <target>Cliquez ici</target>
+      </trans-unit>
+      <trans-unit id="6foG5DW" resname="Create your online store and gain a bigger market">
+        <source>Create your online store and gain a bigger market</source>
+        <target>Créer votre boutique en ligne et gagner un plus grand marchét</target>
+      </trans-unit>
+      <trans-unit id="qzJKzV." resname="Custom application">
+        <source>Custom application</source>
+        <target>Application personnalisée</target>
+      </trans-unit>
+      <trans-unit id="Tef3Vr6" resname="Des exemples de projet créent dans nos ateliers">
+        <source>Des exemples de projet créent dans nos ateliers</source>
+        <target>__Des exemples de projet créent dans nos ateliers</target>
+      </trans-unit>
+      <trans-unit id="mk2Hid4" resname="Our beginingings">
+        <source>Our beginingings</source>
+        <target>Nos débuts</target>
+      </trans-unit>
+      <trans-unit id="tpChmkD" resname="Dashboard 1">
+        <source>Dashboard 1</source>
+        <target>__Dashboard 1</target>
+      </trans-unit>
+      <trans-unit id="djFcl8z" resname="computerization is our priority">
+        <source>computerization is our priority</source>
+        <target>l'informatisation est notre priorité</target>
+      </trans-unit>
+      <trans-unit id="oIfJ_aP" resname="An optimal reading and browsing experience for the user regardless of their device range">
+        <source>An optimal reading and browsing experience for the user regardless of their device range</source>
+        <target>Une expérience de lecture et de navigation optimale pour l'utilisateur quelle que soit sa gamme d'appareil</target>
+      </trans-unit>
+      <trans-unit id="aEf0ZFt" resname="Our team is there to support you and help you with your crazy projects.">
+        <source>Our team is there to support you and help you with your crazy projects.</source>
+        <target>Notre équipe est là pour vous accompagner et vous aider dans vos projets aussi fous soient-ils.</target>
+      </trans-unit>
+      <trans-unit id="Qvy6siz" resname="Project examples created in our workshops">
+        <source>Project examples created in our workshops</source>
+        <target>Des exemples de projet créent dans nos ateliers</target>
+      </trans-unit>
+      <trans-unit id="g7L6QDn" resname="malick-tounkara.com is a platform electronics designed for you in order to answer your concerns">
+        <source>malick-tounkara.com is a platform electronics designed for you in order to answer your concerns</source>
+        <target>malick-tounkara.com est une plate-forme électronique conçue pour vous afin de répondre à vos préocupations</target>
+      </trans-unit>
+      <trans-unit id="xCnHpGP" resname="Creation and lauch of the site">
+        <source>Creation and lauch of the site</source>
+        <target>Création et lancement du site</target>
+      </trans-unit>
+      <trans-unit id="yHfG.0B" resname="February">
+        <source>February</source>
+        <target>Février</target>
+      </trans-unit>
+      <trans-unit id="zQhXJQh" resname="Adding two members">
+        <source>Adding two members</source>
+        <target>Ajout de deux membres</target>
+      </trans-unit>
+      <trans-unit id="qCebVWt" resname="Pépin Djoneska and Mamadou Diéme are now part of our team">
+        <source>Pépin Djoneska and Mamadou Diéme are now part of our team</source>
+        <target>Pépin Djoneska et Mamadou diéme font désormais partie de notre équipe</target>
+      </trans-unit>
+      <trans-unit id="yFAQYgS" resname="Our team is there to support you and help you in your crazy projects">
+        <source>Our team is there to support you and help you in your crazy projects</source>
+        <target>Notre équipe est là pour vous accompagner et vous aider dans vos projets aussi fous soient-ils</target>
+      </trans-unit>
+      <trans-unit id="R6rzG4P" resname="Contact us">
+        <source>Contact us</source>
+        <target>Contactez nous</target>
+      </trans-unit>
+      <trans-unit id="9vRoj.I" resname="Send">
+        <source>Send</source>
+        <target>Envoyer</target>
+      </trans-unit>
+      <trans-unit id="jEWkhuS" resname="Terms of use">
+        <source>Terms of use</source>
+        <target>Conditions d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="UG.zlGI" resname="Privacy Policy">
+        <source>Privacy Policy</source>
+        <target>Politique de confidentialité</target>
+      </trans-unit>
+      <trans-unit id=".Y9m.le" resname="Our amazing team">
+        <source>Our amazing team</source>
+        <target>Notre incroyable equipe</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

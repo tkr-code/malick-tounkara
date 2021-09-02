@@ -1,5 +1,5 @@
 {% macro edit(title) %}
-    <button type="submit" class="btn btn-success"><i class="fas fa-pencil-alt"></i></button>
+    <button type="submit" class="btn btn-success">{{title|trans }} <i class="fas fa-pencil-alt"></i></button>
 {% endmacro %}
 
 {% macro delete() %}
