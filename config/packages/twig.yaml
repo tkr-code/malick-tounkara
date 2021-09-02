@@ -1,7 +1,13 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+<<<<<<< HEAD
     globals:
         app_name: 'my app'
+=======
+    form_themes: ['bootstrap_4_layout.html.twig'] # accepte plusieurs thèmes
+    globals:
+        app_name: 'Malick Tounkara'
+>>>>>>> admin
 when@test:
     twig:
         strict_variables: true
