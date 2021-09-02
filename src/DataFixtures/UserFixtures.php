@@ -32,6 +32,7 @@ class UserFixtures extends Fixture
         $personne = new Personne();
         $personne->setFirstName('Malick')->setLastName('Tounkara');
         $user->setPersonne($personne);
+        
 
         $manager->persist($user);
 

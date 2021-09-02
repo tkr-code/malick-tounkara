@@ -1,0 +1,6 @@
+{% import "macros/button.html.twig" as btn %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ btn.saveOrUpdate()  }}
+{{ form_end(form) }}

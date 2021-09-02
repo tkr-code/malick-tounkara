@@ -242,6 +242,12 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="{{ path('creation_index') }}" class="nav-link gestion-customer">
+            <i class="far fa-circle nav-icon"></i>
+            <p>{{ 'Creation'|trans }}</p>
+          </a>
+        </li>
         {% if is_granted('ROLE_EDITOR') %}
         <li id="gestions" class="nav-item">
           <a href="#" class="gestions nav-link">
@@ -254,36 +260,42 @@
           <ul class="nav nav-treeview">
           {% if is_granted('ROLE_ADMIN') %}
             <li class="nav-item">
-              <a href="{{ path('user_index') }}" class="nav-link gestion-user">
+              <a href="{{ path('users_index') }}" class="nav-link gestion-user">
                 <i class="fas fa-users nav-icon"></i>
                 <p>{{ 'User'|trans }}</p>
               </a>
             </li>
-          {% endif %}
             <li class="nav-item">
+              <a href="{{ path('users_index') }}" class="nav-link gestion-user">
+                <i class="far fa-circle nav-icon"></i>
+                <p>{{ 'Demo'|trans }}</p>
+              </a>
+            </li>
+          {% endif %}
+            {# <li class="nav-item">
               <a href="{{ path('article_index') }}" class="nav-link gestion-customer">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ 'Customer'|trans }}</p>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> #}
+            {# <li class="nav-item">
               <a href="{{ path('article_index') }}" class="nav-link gestion-article">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ 'Article'|trans }}</p>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> #}
+            {# <li class="nav-item">
               <a href="{{ path('category_index') }}" class="nav-link gestion-category">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ 'Category' |trans }}</p>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> #}
+            {# <li class="nav-item">
               <a href="{{ path('order_index') }}" class="nav-link gestion-order ">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ 'Order'|trans }}</p>
               </a>
-            </li>
+            </li> #}
             {# <li class="nav-item">
               <a href="{{ path('user_index') }}" class="nav-link gestion-user">
                 <i class="fas fa-users nav-icon"></i>
@@ -320,6 +332,12 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Admin</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-users nav-icon"></i>
+                <p>User</p>
               </a>
             </li>
           </ul>
