@@ -2,10 +2,13 @@
 
 namespace App\Controller\Main;
 
+use App\Form\ContactType;
 use App\Repository\CreationRepository;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
@@ -37,8 +40,30 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(CreationRepository $creationRepository): Response
+    public function index(Request $request, CreationRepository $creationRepository, MailerInterface $mailerInterface): Response
     {
+      // contact form
+      $formContact = $this->createForm(ContactType::class);
+      $contact = $formContact->handleRequest($request);
+
+      if($formContact->isSubmitted() && $formContact->isValid()){
+        // dd($request);
+        $email = (new TemplatedEmail())
+        ->from($contact->get('email')->getData())
+        ->to('malick.tounkara.1@gmail.com')
+        ->subject('Contact depuis le site malick tounkara')
+        ->htmlTemplate('email/contact.html.twig')
+        ->context([
+          'name'=>$contact->get('name')->getData(),
+          'mail'=>$contact->get('email')->getData(),
+          'phone'=>$contact->get('phone_number')->getData(),
+          'message'=>$contact->get('message')->getData(),
+        ])
+        ;
+        $mailerInterface->send($email);
+        $this->addFlash('success','Email envoyé');
+        return $this->redirectToRoute('home',['/#contact']);
+      }
 
               $projets =
       [
@@ -87,8 +112,9 @@ class MainController extends AbstractController
           'color' => '#fff',
         ],
       ];
-        return $this->render('main/base.html.twig', [
-            'projets'=>$creationRepository->findAll()
+        return $this->renderForm('main/base.html.twig', [
+            'projets'=>$creationRepository->findAll(),
+            'form_contact'=>$formContact
         ]);
     }
 }

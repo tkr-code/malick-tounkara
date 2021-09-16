@@ -37,21 +37,68 @@
         top: 50%;
 
     }
-
+    .form-error-message {
+    background: white;
+    padding: 0 2px;
+    border-radius: 15px;
+}
     #mainNav {
         background-color: none;
     }
+    
+        @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #mdiv{
+            background-color: black;
+            width:99vw;
+            height:100vh;
+            display: grid;
+            place-items: center;
+            position: fixed;
+            z-index: 1040;
+        }
+        .cdiv{
+            width:15rem;
+            height:15rem;
+        }
+        .rot{
+            position: absolute;
+            width:15rem;
+            height:15rem;
+            border-right:0.3rem solid #fff;
+            border-radius: 50%;
+            animation:pre 2s linear infinite;
+        }
+        @keyframes pre {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .lh{
+            color:#fff;
+            font-family: 'Pattaya', sans-serif;
+            text-transform: uppercase;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        
 </style>
 
 <body id="page-top">
-    <!-- <div class="loader-wrapper">
-        <h3>Chargemrnt</h3>
-    </div> -->
-    <!-- <div id=chargement> -->
-    <!-- Chargement en cours... -->
-    <!-- <img src="img/gaboma.gif">
-      <p>Chargement ...</p>
-  </div> -->
+    <div id="mdiv">
+        <div class="cdiv">
+            <div class="rot"></div>
+            <h1 class="lh">Malick Tounkara</h1>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark- fixed-top navbar-shrink" id="mainNav">
         <div class="container">
@@ -110,7 +157,6 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">{{'Welcome to our site and we thank you for your visit'|trans }}</div>
-                <!-- <div class="intro-heading text-uppercase">C ici</div> -->
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">
                 {{'Click here'|trans }}</a>
             </div>
@@ -223,17 +269,13 @@
     </section> #}
 
     <!-- About -->
-    <section class="bg-light page-section" id="about">
+    <section class=" page-section" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">{{ 'About'|trans }}</h2>
                     <h3 class="section-subheading text-muted">
                     {{'malick-tounkara.com is a platform electronics designed for you in order to answer your concerns'|trans }}
-                    {# malick-tounkara.com est une plate-forme
-                        électronique conçue pour vous
-                        afin de répondre à vos préocupations #}
-
                     </h3>
                 </div>
             </div>
@@ -263,55 +305,18 @@
                                 <div class="timeline-heading">
                                     <h4>
                                         {{'February'|trans }} 2021
-                                        {# Février 2021 #}
                                     </h4>
                                     <h4 class="subheading">
                                         {{'Adding two members'|trans }}
-                                        {# Ajout de deux membres #}
                                     </h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
                                         {{'Pépin Djoneska and Mamadou Diéme are now part of our team'|trans }}
-                                        {# Pépin Djoneska et Mamadou diéme font désormais partie de notre équipe. #}
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <!-- <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li> -->
                         <li class="timeline-inverted">
                             <div data-aos="zoom-out-up" class="timeline-image">
                                 <h4>Faire partie
@@ -406,84 +411,48 @@
         </div>
     </section>
 
-    <!-- Clients -->
-    <!-- <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
     <!-- Contact -->
     <section class="page-section" id="contact">
         <div class="container">
             <div class="row">
                 <div data-aos="fade-up-right" class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">{{'Contact us'|trans }}</h2>
-                    <h3 class="section-subheading text-muted">{{'How can we help you ?'}}</h3>
-                    {# Comment pouvons-nous vous aider ? #}
+                    <h3 class="section-subheading text-white">{{'How can we help you ?'}}</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="name" type="text"
-                                        placeholder="Votre Nom (Obligatoire)" required="required"
-                                        data-validation-required-message="Entrer votre nom s'il vous plait.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="email" type="email"
-                                        placeholder="Votre Email (Obligatoire)" required="required"
-                                        data-validation-required-message="Entrer votre adresse email s'il vous plait.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="phone" type="tel"
-                                        placeholder="Votre numéro (Obligatoire)" required="required"
-                                        data-validation-required-message="Entrer votre numéro de téléphone s'il vous plait.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                    {{ form_start(form_contact,{
+                        'attr':{
+                            'novalidate':'novalidate'
+                        }
+                    }) }}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form_contact.name) }}
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="message"
-                                        placeholder="Votre Message (Obligatoire)" required="required"
-                                        data-validation-required-message="Entrer un message s'il vous plait."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                            <div class="form-group">
+                                {{ form_row(form_contact.email) }}
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase"
-                                    type="submit">{{'Send'|trans }}</button>
+                            <div class="form-group">
+                                {{ form_row(form_contact.phone_number) }}
                             </div>
                         </div>
-                    </form>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form_contact.message) }}
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button class="btn btn-primary btn-xl text-uppercase"
+                                type="submit">{{'Send'|trans }}</button>
+                        </div>
+                    </div>
+                    {{ form_widget(form_contact) }}
+                    {{ form_end(form_contact) }}
                 </div>
             </div>
         </div>
@@ -613,13 +582,11 @@
 
     <script>
         AOS.init();
+        $(window).on('load', function () {
+            $('#mdiv').css('display','none')
+        });
     </script>
 
 </body>
-<<<<<<< HEAD
-</html>
->>>>>>> admin
-=======
 
 </html>
->>>>>>> home
