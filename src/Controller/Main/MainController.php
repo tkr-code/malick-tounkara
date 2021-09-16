@@ -87,7 +87,7 @@ class MainController extends AbstractController
           'color' => '#fff',
         ],
       ];
-        return $this->render('main/home/index.html.twig', [
+        return $this->render('main/base.html.twig', [
             'projets'=>$creationRepository->findAll()
         ]);
     }
